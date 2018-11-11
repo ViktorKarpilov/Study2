@@ -9,7 +9,7 @@ def Do_uppload(n,sett):
     for i in range(n-1):
         res.add(i+1)
     return (res-sett)
-while not End:
+while (not End):
     number_n = validation.int_valid()
     lst = validation.list_int_valid()
     upload = Do_uppload(number_n,lst)
