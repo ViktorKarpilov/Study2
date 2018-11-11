@@ -33,3 +33,14 @@ def Recursion_with_acum(massive,i=0):
     return current + Recursion_with_acum(massive,i+1)
 my_list = [11,5,[4,3,[53,3]], 4]
 print('recursion with acumulation:', Recursion_with_acum(my_list))
+def For_sum(my_list):
+    my_list = str(my_list)
+    my_list = my_list.replace("[", " ").replace("]", " ").replace(",", " ")
+    my_list = my_list.split(" ")
+    res = 0
+    for i in my_list:
+        if (i != ""):
+            res += int(i)
+    return res
+
+print('for :', For_sum(my_list))
