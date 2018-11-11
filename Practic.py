@@ -18,4 +18,4 @@ def While_sum(massive):
     while(len(massive)>0):
         res += massive.pop()
     return res
-print(Recursivly_sum(numbers),For_sum(numbers),While_sum(numbers))
+print(Recursivly_sum(numbers))
