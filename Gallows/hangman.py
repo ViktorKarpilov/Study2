@@ -68,7 +68,7 @@ def hangman(secret_word):
 
     # lives = int(input("Enter difficult"))
     warning = 3
-    lives =12
+    lives =6
     #print(secret_word)
     letters_guessed = []
     # print(get_avalible_letters(letters_guessed))
@@ -81,8 +81,8 @@ def hangman(secret_word):
 
     while lives != 0 and not is_word_guessed(secret_word,letters_guessed):
         print("You have :",lives," lives")
-        print(get_guessed_word(secret_word, letters_guessed))
-        print(list_to_string(get_avalible_letters(letters_guessed)))
+        print("word :" + get_guessed_word(secret_word, letters_guessed))
+        print("Avalible letters :"+list_to_string(get_avalible_letters(letters_guessed)))
         letter = input("Input pleas a letter :")
         if len(letter)!=1 :
             warning -= 1
