@@ -1,7 +1,7 @@
 # Problem Set 2, hangman.py
-# Name: 
-# Collaborators:
-# Time spent:
+# Name: Viktor Karpilov
+# Collaborators: -
+# Time spent: i don`t know , but not too much (3-4 hours)
 
 # Hangman Game
 # -----------------------------------
@@ -176,10 +176,13 @@ def match_with_gaps(my_word, other_word):
         False otherwise: 
     '''
     my_word = my_word.replace(" ","")
+    letters_set = set(my_word)
     if len(other_word) != len(my_word):
         return False
     for i in range(len(my_word)):
         if my_word[i] != other_word[i] and my_word[i] != "_":
+            return False
+        elif my_word[i] == '_' and other_word[i] != '_' and other_word[i] in letters_set:
             return False
 
     return True
